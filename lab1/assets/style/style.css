@@ -1,0 +1,43 @@
+header {
+  background-color: #24ff00 ;
+  border-radius: 6px ;
+  padding: 24px 15px ;
+  text-align: center ;
+  display: block ;
+}
+
+nav {
+  background-color: #f71c22 ;
+  border-radius: 6px ;
+  padding: 24px 15px ;
+  text-align: center ;
+  display: block ;
+}
+
+article {
+  background-color: #64f5ec ;
+  border-radius: 6px ;
+  padding: 24px 15px ;
+  text-align: center ;
+  display: block ;
+  float: left ;
+  width: 63% ;
+}
+
+section {
+  background-color: #4176c9 ;
+  border-radius: 6px ;
+  padding: 24px 15px ;
+  text-align: center ;
+  display: block ;
+}
+
+aside {
+  background-color: #894fde ;
+  border-radius: 6px ;
+  padding: 24px 15px ;
+  text-align: center ;
+  display: block ;
+  float: right ;
+  width: 30% ;
+}
