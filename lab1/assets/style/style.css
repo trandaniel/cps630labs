@@ -1,3 +1,7 @@
+body {
+  margin: 0px; 
+}
+
 main {
   display: flex ;
   flex-flow: row wrap ;
@@ -8,16 +12,15 @@ header, nav, article, section, aside {
   width: 100% ;
   min-width: 75px ;
   min-height: 100px ;
-  border-radius: 6px ;
   text-align: center ;
 }
 
-header {
-  background-color: #02A6F5 ;
+nav {
+  background: -webkit-linear-gradient(-45deg, #06a5ff, #02EFFF)
 }
 
-nav {
-  background-color: #02EFFF ;
+header {
+  background-color: #026bf5 ;
 }
 
 article {
