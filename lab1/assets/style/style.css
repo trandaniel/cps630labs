@@ -13,45 +13,74 @@ header, nav, article, section, aside {
 }
 
 header {
-  background-color: #24ff00 ;
-}
-
-.head2 {
-  background-color: #3cffdc ;
+  background-color: #02A6F5 ;
 }
 
 nav {
-  background-color: #f71c22 ;
+  background-color: #02EFFF ;
 }
 
 article {
-  background-color: #355bb0 ;
+  background-color: #02FF81 ;
 }
 
 section {
-  background-color: #4176c9 ;
+  background-color: #0AE8B8 ;
+}
+
+.sec2-1, .sec2-2, .sec2-3, .sec2-4, .sec2-5, .sec2-6, .sec2-7, .sec2-8, .sec2-9, .sec2-10 {
+  background-color: #8AE8DC ;
 }
 
 aside {
-  background-color: #894fde ;
+  background-color: #02F537 ;
 }
 
 @media (min-width: 600px) {
-  section {
+  .sec1-1, .sec1-2, .sec1-3, .sec1-4 {
     width: 50% ;
   }
+
+  .sec2-1, .sec2-2, .sec2-3, .sec2-4, .sec2-5, .sec2-6, .sec2-7, .sec2-8, .sec2-9, .sec2-10 {
+    width: 50% ;
+  }
+
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
   .head1, .head2 {
     width: 50% ;
   }
 
   article {
-    width: 33.3% ;
+    width: 33.33% ;
   }
 
-  section {
+  .sec1-1, .sec1-2, .sec1-3, .sec1-4 {
     width: 25% ;
+  }
+
+  .sec2-3, .sec2-4, .sec2-5, .sec2-6, .sec2-7, .sec2-8, .sec2-9, .sec2-10 {
+    width: 25% ;
+  }
+
+  .sec2-1, .sec2-2 {
+    width: 50% ;
+  }
+
+}
+
+@media (min-width: 1000px) {
+  .sec2-5, .sec2-6, .sec2-7, .sec2-8, .sec2-9, .sec2-10 {
+    width: 16.66% ;
+  }
+  .sec2-1, .sec2-2, .sec2-3, .sec2-4 {
+    width: 25% ;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sec2-1, .sec2-2, .sec2-3, .sec2-4, .sec2-5, .sec2-6, .sec2-7, .sec2-8, .sec2-9, .sec2-10 {
+    width: 10% ;
   }
 }
