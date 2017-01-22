@@ -1,5 +1,5 @@
 body {
-  margin: 0px; 
+  margin: 0px;
 }
 
 main {
@@ -16,23 +16,139 @@ header, nav, article, section, aside {
 }
 
 nav {
-  background: -webkit-linear-gradient(-45deg, #06a5ff, #02EFFF)
+  background: -webkit-linear-gradient(-75deg, #06a5ff, #02EFFF) ;
+  min-height: 60px;
+  font-family: 'Overpass', sans-serif;
+  color: #ffffff ;
+  padding-top: 30px ;
+}
+
+nav > a {
+  text-decoration: none ;
+  color: #6e6e6e ;
+  transition: color 200ms ease-in-out ;
+}
+
+nav > a:hover {
+  color: #ffffff ;
+}
+
+nav > a.current {
+  text-decoration: underline ;
 }
 
 header {
   background-color: #026bf5 ;
+  font-family: 'Roboto', sans-serif;
+  font-size: 70px ;
+}
+
+.head1 {
+  text-align: center ;
+  color: #8af2d7 ;
+}
+
+.head2 {
+  text-align: center ;
+  transition: color 200ms ease-in-out ;
+}
+
+.head2 > a {
+  text-decoration: none ;
+  color: #000000 ;
+  transition: color 200ms ease-in-out ;
+}
+
+.head2 > a:hover {
+  color: #8af2d7 ;
+}
+
+.cat-head {
+  font-size: 30px ;
 }
 
 article {
   background-color: #02FF81 ;
+  font-family: 'Arsenal', sans-serif;
+  text-align: center ;
+  color: #529ef6 ;
+  font-size: 25px ;
 }
 
-section {
+.sec1-1, .sec1-3 {
+  font-size: 30px ;
+}
+
+.sec1-2 > img {
+  max-width: 100% ;
+  max-height: 100% ;
+}
+
+.sec1-4 {
+  padding-bottom: 10px ;
+}
+
+.sec1-4 > img {
+  max-width: 60% ;
+  max-height: 60% ;
+}
+
+.sec2-1 > img {
+  max-width: 100% ;
+  max-height: 100% ;
+}
+
+.sec2-2 > img {
+  max-width: 100% ;
+  max-height: 100% ;
+}
+
+.sec2-3 > img {
+  max-width: 100% ;
+  max-height: 100% ;
+}
+
+.sec2-4 > img {
+  max-width: 100% ;
+  max-height: 100% ;
+}
+
+.sec2-5 > img {
+  max-width: 100% ;
+  max-height: 100% ;
+}
+
+.sec2-6 > img {
+  max-width: 100% ;
+  max-height: 100% ;
+}
+
+.sec2-7 > img {
+  max-width: 100% ;
+  max-height: 100% ;
+}
+
+.sec2-8 > img {
+  max-width: 100% ;
+  max-height: 100% ;
+}
+
+.sec2-9 > img {
+  max-width: 100% ;
+  max-height: 100% ;
+}
+
+.sec2-10 > img {
+  max-width: 100% ;
+  max-height: 100% ;
+}
+.sec1-1, .sec1-2, .sec1-3, .sec1-4 {
   background-color: #0AE8B8 ;
 }
 
 .sec2-1, .sec2-2, .sec2-3, .sec2-4, .sec2-5, .sec2-6, .sec2-7, .sec2-8, .sec2-9, .sec2-10 {
   background-color: #8AE8DC ;
+  font-size: 25px ;
 }
 
 aside {
@@ -53,14 +169,41 @@ aside {
 @media (min-width: 800px) {
   .head1, .head2 {
     width: 50% ;
+    padding-top: 20px ;
   }
 
-  article {
+  .head1 {
+    text-align: right ;
+  }
+
+  .head2 {
+    text-align: left ;
+  }
+
+  .art1, .art2, .art3 {
     width: 33.33% ;
+    padding-top: 15px ;
+  }
+
+  .art1 {
+    text-align: right ;
+  }
+
+  .art3 {
+    text-align: left ;
   }
 
   .sec1-1, .sec1-2, .sec1-3, .sec1-4 {
     width: 25% ;
+    padding-top: 15px ;
+  }
+
+  .sec1-1 {
+    text-align: right ;
+  }
+
+  .sec1-4 {
+    text-align: left ;
   }
 
   .sec2-3, .sec2-4, .sec2-5, .sec2-6, .sec2-7, .sec2-8, .sec2-9, .sec2-10 {
