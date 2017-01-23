@@ -95,9 +95,15 @@ section {
   font-size: 20px ;
 }
 
-#github-pic > a > img {
+.sec1-2 > a > img {
   max-width: 50% ;
   max-height: 50% ;
+  padding-bottom: 10px ;
+}
+
+.sec1-4 > a > img {
+  max-width: 70% ;
+  max-height: 70% ;
   padding-bottom: 10px ;
 }
 
