@@ -18,7 +18,7 @@ header, nav, article, section, aside {
 nav {
   background: -webkit-linear-gradient(-75deg, #06a5ff, #02EFFF) ;
   min-height: 60px;
-  font-family: 'Overpass', sans-serif;
+  font-family: 'Arcon' ;
   color: #ffffff ;
   padding-top: 30px ;
 }
@@ -39,7 +39,7 @@ nav > a.current {
 
 header {
   background-color: #026bf5 ;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Acre' ;
   font-size: 70px ;
 }
 
@@ -69,10 +69,14 @@ header {
 
 article {
   background-color: #02FF81 ;
-  font-family: 'Arsenal', sans-serif;
+  font-family: 'Acre' ;
   text-align: center ;
   color: #529ef6 ;
   font-size: 25px ;
+}
+
+section {
+  font-family: 'Acre' ;
 }
 
 .sec1-1, .sec1-3 {
@@ -214,6 +218,21 @@ aside {
     width: 50% ;
   }
 
+}
+
+@font-face {
+  font-family: 'Acre' ;
+  src: url('../fonts/acre-medium-webfont.ttf');
+}
+
+@font-face {
+  font-family: 'Arcon' ;
+  src: url('../fonts/Arcon-Rounded-Regular.otf');
+}
+
+@font-face {
+  font-family: 'Aaargh' ;
+  src: url('../fonts/Aaargh.ttf');
 }
 
 @media (min-width: 1000px) {
