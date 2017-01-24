@@ -239,21 +239,6 @@ aside {
 
 }
 
-@font-face {
-  font-family: 'Acre' ;
-  src: url('../fonts/acre-medium-webfont.ttf');
-}
-
-@font-face {
-  font-family: 'Arcon' ;
-  src: url('../fonts/Arcon-Rounded-Regular.otf');
-}
-
-@font-face {
-  font-family: 'Aaargh' ;
-  src: url('../fonts/Aaargh.ttf');
-}
-
 @media (min-width: 1000px) {
   .sec2-5, .sec2-6, .sec2-7, .sec2-8, .sec2-9, .sec2-10 {
     width: 16.66% ;
@@ -267,4 +252,20 @@ aside {
   .sec2-1, .sec2-2, .sec2-3, .sec2-4, .sec2-5, .sec2-6, .sec2-7, .sec2-8, .sec2-9, .sec2-10 {
     width: 10% ;
   }
+}
+
+
+@font-face {
+  font-family: 'Acre' ;
+  src: url('../fonts/acre-medium-webfont.ttf');
+}
+
+@font-face {
+  font-family: 'Arcon' ;
+  src: url('../fonts/Arcon-Rounded-Regular.otf');
+}
+
+@font-face {
+  font-family: 'Aaargh' ;
+  src: url('../fonts/Aaargh.ttf');
 }
