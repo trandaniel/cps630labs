@@ -41,6 +41,7 @@ header {
   background-color: #026bf5 ;
   font-family: 'Acre' ;
   font-size: 70px ;
+  padding-top: 15px ;
 }
 
 .head1 {
@@ -179,9 +180,10 @@ aside {
   background-color: #02F537 ;
 }
 
-@media only screen and (min-device-width: 600px) {
+@media only screen and (min-device-width: 600px) and (min-width: 600px){
   .sec1-1, .sec1-2, .sec1-3, .sec1-4 {
     width: 50% ;
+    padding-bottom: 15px ;
   }
 
   .sec2-1, .sec2-2, .sec2-3, .sec2-4, .sec2-5, .sec2-6, .sec2-7, .sec2-8, .sec2-9, .sec2-10 {
@@ -190,7 +192,7 @@ aside {
 
 }
 
-@media only screen and (min-device-width: 800px) {
+@media only screen and (min-device-width: 800px) and (min-width: 600px){
   .head1, .head2 {
     width: 50% ;
     padding-top: 20px ;
@@ -207,6 +209,7 @@ aside {
   .art1, .art2, .art3 {
     width: 33.33% ;
     padding-top: 15px ;
+    padding-bottom: 15px ;
   }
 
   .art1 {
@@ -240,7 +243,7 @@ aside {
 
 }
 
-@media only screen and (min-device-width: 1000px) {
+@media only screen and (min-width: 1000px) and (min-width: 600px){
   .sec2-5, .sec2-6, .sec2-7, .sec2-8, .sec2-9, .sec2-10 {
     width: 16.66% ;
   }
@@ -249,12 +252,11 @@ aside {
   }
 }
 
-@media only screen and (min-device-width: 1300px) {
+@media only screen and (min-width: 1300px) and (min-width: 600px){
   .sec2-1, .sec2-2, .sec2-3, .sec2-4, .sec2-5, .sec2-6, .sec2-7, .sec2-8, .sec2-9, .sec2-10 {
     width: 10% ;
   }
 }
-
 
 @font-face {
   font-family: 'Acre' ;
