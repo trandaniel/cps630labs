@@ -254,7 +254,7 @@ aside {
   src: url('../fonts/Aaargh.ttf');
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 1020px) {
   .sec2-5, .sec2-6, .sec2-7, .sec2-8, .sec2-9, .sec2-10 {
     width: 16.66% ;
   }
