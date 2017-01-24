@@ -8,7 +8,7 @@ main {
   box-sizing: border-box;
 }
 
-header, nav, article, section, aside, body {
+header, nav, article, section, aside {
   width: 100% ;
   min-width: 75px ;
   min-height: 100px ;
@@ -178,7 +178,7 @@ aside {
   background-color: #02F537 ;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .sec1-1, .sec1-2, .sec1-3, .sec1-4 {
     width: 50% ;
   }
@@ -189,7 +189,7 @@ aside {
 
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 800px) {
   .head1, .head2 {
     width: 50% ;
     padding-top: 20px ;
