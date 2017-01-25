@@ -20,7 +20,7 @@ nav {
   min-height: 60px;
   font-family: 'Arcon' ;
   color: #ffffff ;
-  padding-top: 30px ;
+  padding-top: 50px ;
 }
 
 nav > a {
@@ -38,7 +38,7 @@ nav > a.current {
 }
 
 header {
-  background-color: #026bf5 ;
+  background-color: #A5F5E0 ;
   font-family: 'Acre' ;
   font-size: 70px ;
   padding-top: 15px ;
@@ -46,7 +46,7 @@ header {
 
 .head1 {
   text-align: center ;
-  color: #8af2d7 ;
+  color: #626a68 ;
 }
 
 .head2 {
@@ -61,15 +61,16 @@ header {
 }
 
 .head2 > a:hover {
-  color: #8af2d7 ;
+  color: #626a68 ;
 }
 
 .cat-head {
   font-size: 30px ;
+  padding-bottom: 15px ;
 }
 
 article {
-  background-color: #02FF81 ;
+  background-color: #B2FFFB ;
   font-family: 'Acre' ;
   text-align: center ;
   color: #529ef6 ;
@@ -117,62 +118,62 @@ section {
   max-height: 60% ;
 }
 
-.sec2-1 > img {
-  max-width: 100% ;
-  max-height: 100% ;
+.sec2-1 > figure > img {
+  max-width: 100px ;
+  max-height: 100px ;
 }
 
-.sec2-2 > img {
-  max-width: 100% ;
-  max-height: 100% ;
+.sec2-2 > figure > img {
+  max-width: 100px ;
+  max-height: 100px ;
 }
 
-.sec2-3 > img {
-  max-width: 100% ;
-  max-height: 100% ;
+.sec2-3 > figure > img {
+  max-width: 100px ;
+  max-height: 100px ;
 }
 
-.sec2-4 > img {
-  max-width: 100% ;
-  max-height: 100% ;
+.sec2-4 > figure > img {
+  max-width: 100px ;
+  max-height: 100px ;
 }
 
-.sec2-5 > img {
-  max-width: 100% ;
-  max-height: 100% ;
+.sec2-5 > figure > img {
+  max-width: 100px ;
+  max-height: 100px ;
 }
 
-.sec2-6 > img {
-  max-width: 100% ;
-  max-height: 100% ;
+.sec2-6 > figure > img {
+  max-width: 100px ;
+  max-height: 100px ;
 }
 
-.sec2-7 > img {
-  max-width: 100% ;
-  max-height: 100% ;
+.sec2-7 > figure > img {
+  max-width: 100px ;
+  max-height: 100px ;
 }
 
-.sec2-8 > img {
-  max-width: 100% ;
-  max-height: 100% ;
+.sec2-8 > figure > img {
+  max-width: 100px ;
+  max-height: 100px ;
 }
 
-.sec2-9 > img {
-  max-width: 100% ;
-  max-height: 100% ;
+.sec2-9 > figure > img {
+  max-width: 100px ;
+  max-height: 100px ;
 }
 
-.sec2-10 > img {
-  max-width: 100% ;
-  max-height: 100% ;
+.sec2-10 > figure > img {
+  max-width: 100px ;
+  max-height: 100px ;
 }
 
 .sec1-1, .sec1-2, .sec1-3, .sec1-4 {
-  background-color: #0AE8B8 ;
+  background-color: #B7E7FF ;
 }
 
 .sec2-1, .sec2-2, .sec2-3, .sec2-4, .sec2-5, .sec2-6, .sec2-7, .sec2-8, .sec2-9, .sec2-10 {
-  background-color: #8AE8DC ;
+  background-color: #A7DFE8 ;
   font-size: 25px ;
 }
 
@@ -256,9 +257,11 @@ aside {
   }
 }
 
-@media only screen and (min-width: 1300px) and (min-width: 1300px){
+@media only screen and (min-width: 1200px) and (min-width: 1200px){
   .sec2-1, .sec2-2, .sec2-3, .sec2-4, .sec2-5, .sec2-6, .sec2-7, .sec2-8, .sec2-9, .sec2-10 {
     width: 10% ;
+    font-size: 15px ;
+    text-align: center ;
   }
 }
 
