@@ -21,6 +21,7 @@ nav {
   font-family: 'Arcon' ;
   color: #ffffff ;
   padding-top: 50px ;
+  font-size: 30px ;
 }
 
 nav > a {
@@ -174,7 +175,7 @@ section {
 
 .sec2-1, .sec2-2, .sec2-3, .sec2-4, .sec2-5, .sec2-6, .sec2-7, .sec2-8, .sec2-9, .sec2-10 {
   background-color: #A7DFE8 ;
-  font-size: 25px ;
+  font-size: 35px ;
 }
 
 aside {
