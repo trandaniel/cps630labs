@@ -190,9 +190,13 @@ aside {
     width: 50% ;
   }
 
+  nav {
+    font-size: 30px ;
+  }
+
 }
 
-@media only screen and (min-device-width: 800px) and (min-width: 600px){
+@media only screen and (min-device-width: 800px) and (min-width: 800px){
   .head1, .head2 {
     width: 50% ;
     padding-top: 20px ;
@@ -243,7 +247,7 @@ aside {
 
 }
 
-@media only screen and (min-width: 1000px) and (min-width: 600px){
+@media only screen and (min-width: 1000px) and (min-width: 1000px){
   .sec2-5, .sec2-6, .sec2-7, .sec2-8, .sec2-9, .sec2-10 {
     width: 16.66% ;
   }
@@ -252,7 +256,7 @@ aside {
   }
 }
 
-@media only screen and (min-width: 1300px) and (min-width: 600px){
+@media only screen and (min-width: 1300px) and (min-width: 1300px){
   .sec2-1, .sec2-2, .sec2-3, .sec2-4, .sec2-5, .sec2-6, .sec2-7, .sec2-8, .sec2-9, .sec2-10 {
     width: 10% ;
   }
