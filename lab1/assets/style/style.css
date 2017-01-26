@@ -2,6 +2,12 @@ body {
   margin: 0px;
 }
 
+footer {
+  font-family: 'Acre' ;
+  background-color: #afcee9 ;
+  text-align: center ;
+}
+
 main {
   display: flex ;
   flex-flow: row wrap ;
@@ -11,7 +17,7 @@ main {
 header, nav, article, section, aside {
   width: 100% ;
   min-width: 75px ;
-  min-height: 100px ;
+  min-height: 50px ;
   text-align: center ;
 }
 
@@ -36,6 +42,16 @@ nav > a:hover {
 
 nav > a.current {
   text-decoration: underline ;
+}
+
+footer > a {
+  text-decoration: none ;
+  color: #6e6e6e ;
+  transition: color 200ms ease-in-out ;
+}
+
+footer > a:hover {
+  color: #ffffff ;
 }
 
 header {
@@ -85,7 +101,13 @@ section {
   font-family: 'Acre' ;
 }
 
-.sec1-1, .sec1-3 {
+aside {
+  background-color: #B7E7FF ;
+  width: 100% ;
+  float: left ;
+}
+
+.sec1-1, .sec1-3{
   font-size: 30px ;
 }
 
@@ -98,25 +120,21 @@ section {
   font-size: 20px ;
 }
 
-.sec1-2 > a > img {
+#github > a > img {
   max-width: 50% ;
   max-height: 50% ;
   padding-bottom: 10px ;
 }
 
-.sec1-4 > a > img {
-  max-width: 70% ;
-  max-height: 70% ;
-  padding-bottom: 10px ;
-}
 
 .sec1-4 {
   padding-bottom: 10px ;
+  align-items: center ;
 }
 
 .sec1-4 > img {
-  max-width: 60% ;
-  max-height: 60% ;
+  max-width: 40% ;
+  max-height: 40% ;
 }
 
 .sec2-1 > figure > img {
@@ -178,14 +196,17 @@ section {
   font-size: 35px ;
 }
 
-aside {
-  background-color: #02F537 ;
-}
 
 @media only screen and (min-device-width: 600px) and (min-width: 600px){
   .sec1-1, .sec1-2, .sec1-3, .sec1-4 {
     width: 50% ;
     padding-bottom: 15px ;
+  }
+
+  #aboutme {
+    width: 100% ;
+    text-align: center ;
+    padding-top: 10px ;
   }
 
   .sec2-1, .sec2-2, .sec2-3, .sec2-4, .sec2-5, .sec2-6, .sec2-7, .sec2-8, .sec2-9, .sec2-10 {
@@ -237,6 +258,16 @@ aside {
 
   .sec1-4 {
     text-align: left ;
+  }
+
+  #aboutme {
+    width: 75% ;
+    text-align: right ;
+  }
+
+  #github {
+    width: 25% ;
+    padding-top: 10px ;
   }
 
   .sec2-3, .sec2-4, .sec2-5, .sec2-6, .sec2-7, .sec2-8, .sec2-9, .sec2-10 {
