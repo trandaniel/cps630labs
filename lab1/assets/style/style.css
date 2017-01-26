@@ -126,6 +126,10 @@ aside {
   padding-bottom: 10px ;
 }
 
+#oneplus > img, #macbook > img, #asus1070 > img, #note3 > img {
+  max-width: 90% ;
+  max-height: 90% ;
+}
 
 .sec1-4 {
   padding-bottom: 10px ;
