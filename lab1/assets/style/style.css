@@ -1,5 +1,6 @@
 body {
   margin: 0px;
+  background-color: #A5F5E0 ;
 }
 
 footer {
@@ -99,6 +100,13 @@ article {
 }
 section {
   font-family: 'Acre' ;
+}
+
+section > section {
+  font-family: 'Acre' ;
+  font-size: 15px ;
+  color: #a3a3a3 ;
+  text-align: right ;
 }
 
 aside {
