@@ -8,13 +8,14 @@
     <script src="https://use.fontawesome.com/9655b265f7.js"></script>
   </head>
   <body>
+    <!-- BEGIN NAVBAR -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">
             <i class="fa fa-home" aria-hidden="true"></i>
           </a>
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav navbar-left">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="lab1/index.html">Lab 1</a></li>
             <li><a href="#">Lab 2</a></li>
@@ -23,7 +24,11 @@
             <li><a href="#">Lab 5</a></li>
           </ul>
         </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a></li>
+        </ul>
       </div>
     </nav>
+    <!-- END NAVBAR -->
   </body>
 </html>
