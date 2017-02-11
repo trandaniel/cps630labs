@@ -1,10 +1,182 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Lab 2 CPS630</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>Lab 2 CPS630</title>
+  <link rel="stylesheet" href="assets/style/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="search">
+      <form class="search" action="index.html" method="POST">
+        Find your city: <wbr> <input class="search-bar" id="inputStatus" list="cities" type="text" placeholder="e.g. Toronto" autocomplete="off">
+        <datalist id="cities">
+        </datalist>
+        <button type="submit" name="button">Go!</button>
+      </form>
+    </div>
+  </div>
+  <script>
+  var input = document.getElementById("inputStatus") ;
+  var datalist = document.getElementById("cities") ;
+  var key = "b43f49e52ab5d9256ec3c0806f19eb49" ;
+  var apiSearch = "http://api.openweathermap.org/data/2.5/find?q=" ;
+  var searchCond = "&type=like&appid=" ;
+  var xmlhttp = new XMLHttpRequest() ;
+  var url = apiSearch + input.value + searchCond + key ;
+  if (!input.value) {
+    xmlhttp.onreadystatechange = function() {
+      if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+        input.placeholder = "Loading" ;
+        var jsonRes = xmlhttp.responseText ;
+        findCities(jsonRes) ;
+      }
+      else {
+        input.placeholder = "e.g. Toronto" ;
+      }
+    } ;
 
-  </body>
+    xmlhttp.open("GET", url, true) ;
+    xmlhttp.send() ;
+  }
+  function findCities(response) {
+    var out = "" ;
+    var jsonArr = JSON.parse(jsonArr) ;
+    jsonArr.list.forEach(city) {
+      out += "<option name =\"" + city.name +"\"></option>" ;
+    }
+    datalist.innerHTML = out ;
+  }
+
+  var currentTime = new Date().getHours();
+
+  switch (currentTime) {
+    case 0:
+    if (document.body) {
+      document.body.className = "sky-00" ;
+    }
+    break ;
+    case 1:
+    if (document.body) {
+      document.body.className = "sky-01" ;
+    }
+    break ;
+    case 2:
+    if (document.body) {
+      document.body.className = "sky-02" ;
+    }
+    break ;
+    case 3:
+    if (document.body) {
+      document.body.className = "sky-03" ;
+    }
+    break ;
+    case 4:
+    if (document.body) {
+      document.body.className = "sky-04" ;
+    }
+    break ;
+    case 5:
+    if (document.body) {
+      document.body.className = "sky-05" ;
+    }
+    break ;
+    case 6:
+    if (document.body) {
+      document.body.className = "sky-06" ;
+    }
+    break ;
+    case 7:
+    if (document.body) {
+      document.body.className = "sky-07" ;
+    }
+    break ;
+    case 8:
+    if (document.body) {
+      document.body.className = "sky-08" ;
+    }
+    break ;
+    case 9:
+    if (document.body) {
+      document.body.className = "sky-09" ;
+    }
+    break ;
+    case 10:
+    if (document.body) {
+      document.body.className = "sky-10" ;
+    }
+    break ;
+    case 11:
+    if (document.body) {
+      document.body.className = "sky-11" ;
+    }
+    break ;
+    case 12:
+    if (document.body) {
+      document.body.className = "sky-12" ;
+    }
+    break ;
+    case 13:
+    if (document.body) {
+      document.body.className = "sky-13" ;
+    }
+    break ;
+    case 14:
+    if (document.body) {
+      document.body.className = "sky-14" ;
+    }
+    break ;
+    case 15:
+    if (document.body) {
+      document.body.className = "sky-15" ;
+    }
+    break ;
+    case 16:
+    if (document.body) {
+      document.body.className = "sky-16" ;
+    }
+    break ;
+    case 17:
+    if (document.body) {
+      document.body.className = "sky-17" ;
+    }
+    break ;
+    case 18:
+    if (document.body) {
+      document.body.className = "sky-18" ;
+    }
+    break ;
+    case 19:
+    if (document.body) {
+      document.body.className = "sky-19" ;
+    }
+    break ;
+    case 20:
+    if (document.body) {
+      document.body.className = "sky-20" ;
+    }
+    break ;
+    case 21:
+    if (document.body) {
+      document.body.className = "sky-21" ;
+    }
+    break ;
+    case 22:
+    if (document.body) {
+      document.body.className = "sky-22" ;
+    }
+    break ;
+    case 23:
+    if (document.body) {
+      document.body.className = "sky-23" ;
+    }
+    break ;
+    default:
+    if (document.body) {
+      document.body.className = "sky-default" ;
+    }
+  }
+  </script>
+</body>
 </html>
