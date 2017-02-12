@@ -13,21 +13,55 @@
         Find your city: <wbr> <input class="search-bar" id="inputStatus" list="cities" type="text" placeholder="e.g. Toronto" autocomplete="off" oninput="searchCities()">
           <datalist id="cities"></datalist>
           <button type="button" name="button" onclick="getWeather()">Go!</button> <br>
-          Celsius
+          <img src="assets/images/001lighticons-46.png" alt="Celsius" width="40px" height="40px">
           <label class="switch">
             <input id="unit" class="units" type="checkbox">
             <div class="slider round"></div>
           </label>
-          Fahrenheit
+          <img src="assets/images/001lighticons-47.png" alt="Fahrenheit" width="40px" height="40px">
         </form>
       </div>
       <div id="weatherInfo">
-
-      </div>
-    </div>
-    <script src="assets/scripts/credentials.js" charset="utf-8"></script>
-    <script type="text/javascript" src="assets/scripts/searchCity.js"></script>
-    <script type="text/javascript" src="assets/scripts/weather.js"></script>
-    <script type="text/javascript" src="assets/scripts/background-hourly.js"></script>
-  </body>
-  </html>
+        <span id="currentCity"></span>
+        Current weather conditions: <span id="weatherCondNow"></span> <wbr> <span id="weatherDesNow"></span> <span id="weatherImgNow"></span> <br>
+          Current tempature: <span id="temp"></span><img id="tempImg" src="assets/images/001lighticons-46.png" alt="unit" width="40px" height="40px"> <br>
+          Low: <span id="minTemp"></span> <img id="minTempImg" src="assets/images/001lighticons-46.png" alt="Unit" width="40px" height="40px"> <br>
+          High: <span id="maxTemp"></span> <img id="maxTempImg" src="assets/images/001lighticons-46.png" alt="Unit" width="40px" height="40px"> <br>
+          Pressure: <span id="pressure"></span> hPa <br>
+          Humidity: <span id="humidity"></span> % <br>
+          Wind Speed: <span id="windSpd"></span> m/s <wbr> Wind Direction: <span id="windDeg"></span> <br>
+          </div>
+          <div class="fiveDayForecast">
+            <div class="day1">
+              Tomorrow <br>
+              <span id="day1temp"></span><img id="day1unitImg" src="assets/images/001lighticons-46.png" alt="unit" width="40px" height="40px"> <br>
+              <span id="day1weather"></span> <span id="day1weatherImg"></span>
+            </div>
+            <div class="day2">
+              Tomorrow Tomorrow <br>
+              <span id="day2temp"></span><img id="day2unitImg" src="assets/images/001lighticons-46.png" alt="unit" width="40px" height="40px"> <br>
+              <span id="day2weather"></span> <span id="day2weatherImg"></span>
+            </div>
+            <div class="day3">
+              Tomorrow x 3 <br>
+              <span id="day3temp"></span><img id="day3unitImg" src="assets/images/001lighticons-46.png" alt="unit" width="40px" height="40px"> <br>
+              <span id="day3weather"></span> <span id="day3weatherImg"></span>
+            </div>
+            <div class="day4">
+              Tomorrow x 4 <br>
+              <span id="day4temp"></span><img id="day4unitImg" src="assets/images/001lighticons-46.png" alt="unit" width="40px" height="40px"> <br>
+              <span id="day4weather"></span> <span id="day4weatherImg"></span>
+            </div>
+            <div class="day5">
+              Tomorrow x 5 <br>
+              <span id="day5temp"></span><img id="day5unitImg" src="assets/images/001lighticons-46.png" alt="unit" width="40px" height="40px"> <br>
+              <span id="day5weather"></span> <span id="day5weatherImg"></span>
+            </div>
+          </div>
+        </div>
+        <script src="assets/scripts/credentials.js" charset="utf-8"></script>
+        <script type="text/javascript" src="assets/scripts/searchCity.js"></script>
+        <script type="text/javascript" src="assets/scripts/weather.js"></script>
+        <script type="text/javascript" src="assets/scripts/background-hourly.js"></script>
+      </body>
+      </html>

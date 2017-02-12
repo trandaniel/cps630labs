@@ -1,8 +1,8 @@
-var key = credentials.apikey ;
-var apiSearch = "http://api.openweathermap.org/data/2.5/find?q=" ;
-var searchCond = "&type=like&cnt=10&appid=" ;
-var input = document.getElementById("inputStatus") ;
 function searchCities() {
+  var key = credentials.apikey ;
+  var apiSearch = "http://api.openweathermap.org/data/2.5/find?q=" ;
+  var searchCond = "&type=like&appid=" ;
+  var input = document.getElementById("inputStatus") ;
   var xmlhttp = new XMLHttpRequest() ;
   var url = apiSearch + input.value + searchCond + key ;
 

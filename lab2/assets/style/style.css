@@ -40,6 +40,12 @@ html {
   flex-flow: row wrap ;
 }
 
+.container-night {
+  display: flex ;
+  flex-flow: row wrap ;
+  background-color: rgba(#bebebe, 0.74) ;
+}
+
 div.search {
   /*background-color: #888888 ;*/
   margin-top: 50px ;
@@ -134,7 +140,31 @@ input:checked + .slider:before {
 }
 
 .search-bar:focus {
-    border: 3px solid #555;
+  border: 3px solid #555;
+}
+
+#weatherInfo {
+  width: 100% ;
+  padding: 10px ;
+  /*background-color: red ;*/
+  font-family: 'Roboto', sans-serif;
+  text-align: center ;
+  display: inline-block ;
+  font-size: 25px ;
+}
+
+.fiveDayForecast {
+  display: flex ;
+  flex-flow: row wrap ;
+  width: 100% ;
+  padding-top: 10px ;
+}
+.day1, .day2, .day3, .day4, .day5 {
+  width: 100% ;
+  background-color: rgba(158, 158, 158, 0.83) ;
+  text-align: center ;
+  font-family: 'Roboto', sans-serif ;
+  padding-top: 10px ;
 }
 
 @media only screen and (min-width: 300px) and (min-device-width: 300px) {
@@ -172,9 +202,16 @@ input:checked + .slider:before {
 }
 
 @media only screen and (min-width: 800px) and (min-device-width: 800px) {
-
+  .day1, .day2, .day3, .day4{
+    width: 50% ;
+  }
+  .day5 {
+    width: 100% ;
+  }
 }
 
 @media only screen and (min-width: 1000px) and (min-device-width: 1000px) {
-
+  .day1, .day2, .day3, .day4, .day5 {
+    width: 20% ;
+  }
 }
