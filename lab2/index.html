@@ -11,16 +11,23 @@
     <div class="search">
       <form class="search" action="index.html" method="GET">
         Find your city: <wbr> <input class="search-bar" id="inputStatus" list="cities" type="text" placeholder="e.g. Toronto" autocomplete="off" oninput="searchCities()">
-        <datalist id="cities">
-        </datalist>
-        <button type="submit" name="button">Go!</button>
-      </form>
+          <datalist id="cities"></datalist>
+          <button type="button" name="button" onclick="getWeather()">Go!</button> <br>
+          Celsius
+          <label class="switch">
+            <input id="unit" class="units" type="checkbox">
+            <div class="slider round"></div>
+          </label>
+          Fahrenheit
+        </form>
+      </div>
+      <div id="weatherInfo">
+
+      </div>
     </div>
-    <div class="weatherInfo">
-      
-    </div>
-  </div>
-  <script type="text/javascript" src="assets/scripts/searchCity.js"></script>
-  <script type="text/javascript" src="assets/scripts/background-hourly.js"></script>
-</body>
-</html>
+    <script src="assets/scripts/credentials.js" charset="utf-8"></script>
+    <script type="text/javascript" src="assets/scripts/searchCity.js"></script>
+    <script type="text/javascript" src="assets/scripts/weather.js"></script>
+    <script type="text/javascript" src="assets/scripts/background-hourly.js"></script>
+  </body>
+  </html>

@@ -1,4 +1,4 @@
-var key = "b43f49e52ab5d9256ec3c0806f19eb49" ;
+var key = credentials.apikey ;
 var apiSearch = "http://api.openweathermap.org/data/2.5/find?q=" ;
 var searchCond = "&type=like&cnt=10&appid=" ;
 var input = document.getElementById("inputStatus") ;
@@ -20,8 +20,7 @@ function findCities(response) {
   var out = "" ;
   var jsonArr = JSON.parse(response) ;
   for(var i = 0 ; i < jsonArr.list.length ; i++) {
-    out += "<option value =\"" + jsonArr.list[i].name + ", " + jsonArr.list[i].sys.country +
-    "\" onclick=\"getWeather(" + jsonArr.list[i] +")\"></option>" ;
+    out += "<option value =\"" + jsonArr.list[i].name + ", " + jsonArr.list[i].sys.country + "\"></option>" ;
   }
   document.getElementById("cities").innerHTML = out ;
 }

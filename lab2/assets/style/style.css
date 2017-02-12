@@ -34,10 +34,6 @@ html {
 .sky-22 { background: linear-gradient(to bottom, #090401 50%,#4B1D06 100%); }
 .sky-23 { background: linear-gradient(to bottom, #00000c 80%,#150800 100%); }
 
-div {
-  width: 100% ;
-  min-height: 100px ;
-}
 
 .container {
   display: flex ;
@@ -46,13 +42,14 @@ div {
 
 div.search {
   /*background-color: #888888 ;*/
+  margin-top: 50px ;
   text-align: center ;
   border-radius: 7px ;
   height: auto ;
-  line-height: 100px ;
   white-space: nowrap ;
   font-size: 25px ;
   font-family: 'Roboto', sans-serif;
+  width: 100% ;
 }
 
 .search > button {
@@ -72,13 +69,68 @@ div.search {
 
 }
 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2a17fc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #888;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2a17fc;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
 .search-bar {
   width: 40% ;
   padding: 5px 10px ;
   opacity: 0.4 ;
   border: 3px solid #ccc ;
-  font-size: 25px ;
-
+  font-size: 15px ;
 }
 
 .search-bar:focus {
@@ -86,7 +138,9 @@ div.search {
 }
 
 @media only screen and (min-width: 300px) and (min-device-width: 300px) {
-
+  .search-bar {
+    font-size: 20px ;
+  }
 }
 
 @media only screen and (min-width: 600px) and (min-device-width: 600px) {
@@ -118,9 +172,7 @@ div.search {
 }
 
 @media only screen and (min-width: 800px) and (min-device-width: 800px) {
-  div.search {
-    line-height: 100px ;
-  }
+
 }
 
 @media only screen and (min-width: 1000px) and (min-device-width: 1000px) {
