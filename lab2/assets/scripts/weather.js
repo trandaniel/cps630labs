@@ -7,7 +7,7 @@
 //"weather":[{"id":804,"main":"Clouds","description":"overcast clouds","icon":"04n"}]}
 
 function getWeather() {
-  var key = "b43f49e52ab5d9256ec3c0806f19eb49" ;
+  var key = credentials.apikey ;
   var apiSearch = "http://api.openweathermap.org/data/2.5/weather?q=" ;
   var searchCond = "&appid=" ;
   var xmlhttp = new XMLHttpRequest() ;
