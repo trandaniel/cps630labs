@@ -43,7 +43,7 @@ html {
 .container-night {
   display: flex ;
   flex-flow: row wrap ;
-  background-color: rgba(#bebebe, 0.74) ;
+  background-color: rgba(190, 190, 190, 0.4) ;
 }
 
 div.search {
@@ -161,7 +161,7 @@ input:checked + .slider:before {
 }
 .day1, .day2, .day3, .day4, .day5 {
   width: 100% ;
-  background-color: rgba(158, 158, 158, 0.83) ;
+  background-color: rgba(158, 158, 158, 0.4) ;
   text-align: center ;
   font-family: 'Roboto', sans-serif ;
   padding-top: 10px ;

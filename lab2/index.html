@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="container">
     <div class="search">
       <form class="search" action="index.html" method="GET">
         Find your city: <wbr> <input class="search-bar" id="inputStatus" list="cities" type="text" placeholder="e.g. Toronto" autocomplete="off" oninput="searchCities()">
@@ -15,7 +15,7 @@
           <button type="button" name="button" onclick="getWeather()">Go!</button> <br>
           <img src="assets/images/001lighticons-46.png" alt="Celsius" width="40px" height="40px">
           <label class="switch">
-            <input id="unit" class="units" type="checkbox">
+            <input id="unit" class="units" type="checkbox" onclick="getWeather()">
             <div class="slider round"></div>
           </label>
           <img src="assets/images/001lighticons-47.png" alt="Fahrenheit" width="40px" height="40px">
