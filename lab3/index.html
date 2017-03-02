@@ -10,10 +10,17 @@
   <h1>Geolocator</h1>
   <div id="holder">Drag a file here!</div>
   <p id="status">File API and FileReader API not supported</p>
+  <section>
+
+  </section>
+  <button type="button" name="button" onClick="getLocation()">Get Current Position</button>
+  <div id="currentLocation"></div>
   <script>
-  // modified from http://html5demos.com/file-api
   var holder = document.getElementById('holder'),
   state = document.getElementById('status');
+  var displayLocation = document.getElementById('currentLocation') ;
+
+
 
   if (typeof window.FileReader === 'undefined') {
     state.className = 'fail';
@@ -45,6 +52,21 @@
 
     return false;
   };
+
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition) ;
+    }
+    else {
+      currentLocation.innerHTML = "Geolocation is not supported or you did not give permission to use your location." ;
+    }
+
+  }
+
+  function showPosition(position) {
+    currentLocation.innerHTML = "Latitude:" + position.coords.latitude + "<br>" +
+                                "Longitude" + position.coords.longitude ;
+  }
   </script>
 </body>
 </html>
