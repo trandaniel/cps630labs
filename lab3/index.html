@@ -20,8 +20,6 @@
   state = document.getElementById('status');
   var displayLocation = document.getElementById('currentLocation') ;
 
-
-
   if (typeof window.FileReader === 'undefined') {
     state.className = 'fail';
   } else {
@@ -45,7 +43,15 @@
     reader = new FileReader();
     reader.onload = function(event) {
       console.log(event.target);
-      holder.innerText = event.target.result;
+      var locations = event.target.result.split("\n") ;
+      var lats = [] ;
+      var longs = [] ;
+      for (var i = 0 ; i < locations.length ; i++) {
+        var temp = locations[i].split(", ") ;
+        lats.push(temp[0]) ;
+        longs.push(temp[1]) ;
+      }
+      holder.innerText = lats[0] + " " +longs[0];
     };
     console.log(file);
     reader.readAsText(file);
@@ -58,13 +64,13 @@
       navigator.geolocation.getCurrentPosition(showPosition) ;
     }
     else {
-      currentLocation.innerHTML = "Geolocation is not supported or you did not give permission to use your location." ;
+      displayLocation.innerHTML = "Geolocation is not supported or you did not give permission to use your location." ;
     }
 
   }
 
   function showPosition(position) {
-    currentLocation.innerHTML = "Latitude:" + position.coords.latitude + "<br>" +
+    displayLocation.innerHTML = "Latitude:" + position.coords.latitude + "<br>" +
                                 "Longitude" + position.coords.longitude ;
   }
   </script>
