@@ -5,13 +5,19 @@ body {
 h1 {
   text-align: center ;
   font-family: 'Raleway', sans-serif ;
+  font-size: 50px ;
+}
+
+main {
+  display: flex ;
+  flex-flow: row wrap ;
 }
 
 #holder {
   border: 6px dashed #ccc;
-  width: 400px;
-  height: 400px;
-  margin: 20px auto auto 5%;
+  width: 85%;
+  height: 85%;
+  margin: 20px auto auto auto;
   text-align: center ;
   font-family: 'Raleway', sans-serif ;
   font-size: 30px ;
@@ -23,17 +29,96 @@ h1 {
   border: 6px dashed #333;
 }
 
+
+#map {
+  width: 100% ;
+  margin: 0 ;
+}
+
 #status {
   font-family: 'Raleway', sans-serif ;
-  margin-left: 5% ;
+  margin-left: 10% ;
 }
 
 #currentLocation {
-  margin-top: 20px ;
-  margin-left: 5% ;
+  margin-top: 10px ;
+  margin-left: 10% ;
   font-family: 'Raleway', sans-serif ;
 }
 
 button {
-  margin-left: 5% ;
+  margin-left: 10% ;
+}
+
+@media only screen and (min-width: 300px) and (min-device-width: 300px) {
+  #holder {
+    width: 90% ;
+    height: 250px ;
+    line-height: 250px ;
+  }
+
+  #map {
+    margin: 5% 20px 20px 5% ;
+    width: 90% ;
+    height: 250px ;
+  }
+}
+@media only screen and (min-width: 600px) and (min-device-width: 600px){
+  #holder {
+    width: 250px ;
+    height: 250px ;
+    line-height: 250px ;
+    font-size: 20px ;
+  }
+
+  #map {
+    margin: 0 ;
+    width: 50% ;
+    height: 262px ;
+    margin-top: 20px ;
+  }
+
+}
+
+@media only screen and (min-width: 730px) and (min-device-width: 750px) {
+  #holder {
+    width: 325px ;
+    height: 325px ;
+    line-height: 325px ;
+    font-size: 25px ;
+  }
+
+  #map {
+    width: 50% ;
+    height: 337px ;
+  }
+}
+@media only screen and (min-width: 900px) and (min-device-width: 900px) {
+  #holder {
+    width: 400px ;
+    height: 400px ;
+    line-height: 400px ;
+    font-size: 35px ;
+  }
+
+  #map {
+    width: 50% ;
+    height: 412px ;
+  }
+
+}
+
+@media only screen and (min-width: 1100px) and (min-device-width: 1100px) {
+  #holder {
+    width: 500px ;
+    height: 500px ;
+    line-height: 500px ;
+    font-size: 40px ;
+  }
+
+  #map {
+    width: 50% ;
+    height: 512px ;
+  }
+
 }
