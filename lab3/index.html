@@ -10,22 +10,25 @@
   <h1>Geolocator</h1>
   <main>
     <div id="holder">Drag a file here!</div>
-    <section id="map">
+    <section id="map" onload="myMap()">
     </section>
   </main> <br>
   <p id="status">File API and FileReader API not supported</p>
   <section>
 
   </section>
-  <button type="button" name="button" onClick="myMap()">Get Current Position</button>
-  <div id="currentLocation"></div>
+  <button type="button" name="locate" onClick="findMe()">Find me!</button> <br>
+  <button type="button" name="clear" onClick="clearMarkers()">Clear map</button>
   <script type="text/javascript" src="assets/scripts/credentials.js"></script>
   <script>
   var holder = document.getElementById('holder'),
   state = document.getElementById('status');
   var displayLocation = document.getElementById('currentLocation') ;
-  curLong = "43.65804913357417" ;
-  curLat = "-79.37839028180628" ;
+  var curLat = 43.65748683 ;
+  var curLong = -79.37176122 ;
+  var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' ;
+  var labelIndex = 0 ;
+  var markers = [] ;
 
   if (typeof window.FileReader === 'undefined') {
     state.className = 'fail';
@@ -52,14 +55,8 @@
       console.log(event.target);
 
       var locations = event.target.result.split("\n") ;
-      var lats = [] ;
-      var longs = [] ;
-      for (var i = 0 ; i < locations.length ; i++) {
-        var temp = locations[i].split(", ") ;
-        lats.push(temp[0]) ;
-        longs.push(temp[1]) ;
-      }
-      holder.innerText = lats[3] + " " + longs[3];
+      clearMarkers() ;
+      addMarkers(locations) ;
     };
     console.log(file);
     reader.readAsText(file);
@@ -67,14 +64,37 @@
     return false;
   };
 
-  function showPosition(position) {
-    displayLocation.innerHTML = "Latitude: " + position.coords.latitude + "<br>" +
-    "Longitude: " + position.coords.longitude ;
-    curLong = position.coords.longitude ;
-    curLat = position.coords.latitude ;
+  function clearMarkers() {
+    for (var i = 0 ; i < markers.length ; i ++) {
+      markers[i].setMap(null) ;
+    }
+    markers = [] ;
+    labelIndex = 0 ;
   }
 
-  function myMap() {
+  function addMarkers(places) {
+    for (var i = 0 ; i < places.length ; i++) {
+      var temp = places[i].split(", ") ;
+      markers.push(new google.maps.Marker({position: new google.maps.LatLng(parseFloat(temp[0]), parseFloat(temp[1])),
+                                           label: labels[labelIndex++ % labels.length]
+                                          })) ;
+      markers[i].setMap(map) ;
+    }
+
+  }
+
+  function showPosition(position) {
+    curLong = position.coords.longitude ;
+    curLat = position.coords.latitude ;
+    currentPos.setMap(null) ;
+
+    currentPos.position = new google.maps.LatLng(curLat, curLong);
+    map.center.lat = curLat ;
+    map.center.lng = curLong ;
+    currentPos.setMap(map) ;
+  }
+
+  function findMe() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition) ;
     }
@@ -82,12 +102,19 @@
       displayLocation.innerHTML = "Geolocation is not supported or you did not give permission to use your location." ;
     }
 
-    var mapProp = {
-      center: new google.maps.LatLng(parseFloat(curLat), parseFloat(curLong)),
-      zoom: 12,
-    } ;
-    var map = new google.maps.Map(document.getElementById("map"),mapProp);
-    var currentPos = new google.maps.Marker({position: google.maps.LatLng(parseFloat(curLat), parseFloat(curLong))}) ;
+  }
+
+  function myMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+              zoom: 12,
+              center: {lat: curLat, lng: curLong}
+          });
+
+    currentPos = new google.maps.Marker({
+                  position: new google.maps.LatLng(curLat, curLong),
+                  label: '@'
+                }) ;
+
     currentPos.setMap(map) ;
   }
   </script>
