@@ -54,6 +54,7 @@ function clearMarkers() {
   }
   markers = [] ;
   labelIndex = 0 ;
+  document.getElementById('locationInfo').innerHTML = "" ;
 }
 
 function addMarkers(places) {
@@ -123,12 +124,12 @@ function showPosition(position) {
   curLong = position.coords.longitude ;
   curLat = position.coords.latitude ;
   currentPos.setMap(null) ;
-
   currentPos.position = new google.maps.LatLng(curLat, curLong);
-  map.center.lat = curLat ;
-  map.center.lng = curLong ;
   currentPos.setMap(map) ;
-  
+  currentLabel = 0 ;
+  currentLabAdd = 0 ;
+  displayInfo(locations) ;
+
 }
 
 function findMe() {
@@ -164,10 +165,7 @@ function myMap() {
 
 function placeMarker(location) {
   currentPos.setMap(null) ;
-  currentPos = new google.maps.Marker({
-    position: location,
-    map: map
-  });
+  currentPos.position = location ;
   console.log(location) ;
   curLat = location.lat() ;
   curLong = location.lng() ;
