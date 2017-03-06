@@ -46,6 +46,33 @@ main {
   font-family: 'Raleway', sans-serif ;
 }
 
+#locationInfo {
+  align-self: center ;
+  margin: 0 auto 0 auto ;
+  font-family: 'Raleway', sans-serif ;
+}
+
+#locationInfo > table {
+  border-collapse: collapse ;
+  border: 1px solid black ;
+}
+
+#locationInfo > table > tbody > tr > th {
+  text-align: center ;
+  border: 1px solid black ;
+  background-color:#98ff8f ;
+}
+
+#locationInfo > table > tbody > tr {
+  text-align: center ;
+  border: 1px solid black ;
+}
+
+#locationInfo > table > tbody > tr > td {
+  text-align: center ;
+  border: 1px solid black ;
+}
+
 button {
   margin-left: 10% ;
 }

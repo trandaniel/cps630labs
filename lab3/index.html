@@ -14,110 +14,11 @@
     </section>
   </main> <br>
   <p id="status">File API and FileReader API not supported</p>
-  <section>
-
-  </section>
   <button type="button" name="locate" onClick="findMe()">Find me!</button> <br>
   <button type="button" name="clear" onClick="clearMarkers()">Clear map</button>
+  <section id="locationInfo"></section>
   <script type="text/javascript" src="assets/scripts/credentials.js"></script>
-  <script>
-  var holder = document.getElementById('holder'),
-  state = document.getElementById('status');
-  var displayLocation = document.getElementById('currentLocation') ;
-  var curLat = 43.65748683 ;
-  var curLong = -79.37176122 ;
-  var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' ;
-  var labelIndex = 0 ;
-  var markers = [] ;
-
-  if (typeof window.FileReader === 'undefined') {
-    state.className = 'fail';
-  } else {
-    state.className = 'success';
-    state.innerHTML = 'File API & FileReader available';
-  }
-
-  holder.ondragover = function() {
-    this.className = 'hover';
-    return false;
-  };
-  holder.ondragend = function() {
-    this.className = '';
-    return false;
-  };
-  holder.ondrop = function(e) {
-    this.className = '';
-    e.preventDefault();
-
-    var file = e.dataTransfer.files[0],
-    reader = new FileReader();
-    reader.onload = function(event) {
-      console.log(event.target);
-
-      var locations = event.target.result.split("\n") ;
-      clearMarkers() ;
-      addMarkers(locations) ;
-    };
-    console.log(file);
-    reader.readAsText(file);
-
-    return false;
-  };
-
-  function clearMarkers() {
-    for (var i = 0 ; i < markers.length ; i ++) {
-      markers[i].setMap(null) ;
-    }
-    markers = [] ;
-    labelIndex = 0 ;
-  }
-
-  function addMarkers(places) {
-    for (var i = 0 ; i < places.length ; i++) {
-      var temp = places[i].split(", ") ;
-      markers.push(new google.maps.Marker({position: new google.maps.LatLng(parseFloat(temp[0]), parseFloat(temp[1])),
-                                           label: labels[labelIndex++ % labels.length]
-                                          })) ;
-      markers[i].setMap(map) ;
-    }
-
-  }
-
-  function showPosition(position) {
-    curLong = position.coords.longitude ;
-    curLat = position.coords.latitude ;
-    currentPos.setMap(null) ;
-
-    currentPos.position = new google.maps.LatLng(curLat, curLong);
-    map.center.lat = curLat ;
-    map.center.lng = curLong ;
-    currentPos.setMap(map) ;
-  }
-
-  function findMe() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition) ;
-    }
-    else {
-      displayLocation.innerHTML = "Geolocation is not supported or you did not give permission to use your location." ;
-    }
-
-  }
-
-  function myMap() {
-    map = new google.maps.Map(document.getElementById("map"), {
-              zoom: 12,
-              center: {lat: curLat, lng: curLong}
-          });
-
-    currentPos = new google.maps.Marker({
-                  position: new google.maps.LatLng(curLat, curLong),
-                  label: '@'
-                }) ;
-
-    currentPos.setMap(map) ;
-  }
-  </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=KEY&callback=myMap"></script>
+  <script src="assets/scripts/geolocator.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=KEYc&callback=myMap"></script>
 </body>
 </html>
